@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class Main {
-    private static final String inputFilePath = "SampleData/sample-data.csv";
-    private static final String outputFilePath = "SampleData/output.csv";
+    private static final String inputFilePath = "src/main/resources/SampleData/sample-data.csv";
+    private static final String outputFilePath = "src/main/resources/SampleData/output.csv";
     public static void csvManager() throws IOException {
         ArrayList<String[]> outputData = new ArrayList<>();
         ArrayList<Courier> arr = new ArrayList<>();
@@ -61,6 +61,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+        try {
+            csvManager();
+            System.out.println("succesfully Done!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
