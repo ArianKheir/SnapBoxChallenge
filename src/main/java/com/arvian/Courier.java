@@ -23,6 +23,11 @@ public class Courier {
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return R * c;
     }
+    public static double calcSpeed(Courier a, Courier b) {
+        double distanceKm = dist(a.lat, a.lng, b.lat, b.lng);
+        long timeSec = Math.abs(b.timestamp - a.timestamp);
+        return (distanceKm / timeSec) * 3600.0;
+    }
     public String getId() {
         return id;
     }
