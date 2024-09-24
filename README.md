@@ -51,9 +51,9 @@ where `fare_estimate` represents the total fare for the respective delivery.
 ### End-to-end testing
 you should do some changes in Main.java:
 
-`19 private static final String inputFilePath = "src/main/resources/End-to-end Test/input.csv";`
+`15 private static final String inputFilePath = "src/main/resources/End-to-end Test/input.csv";`
 
-`20 private static final String outputFilePath = "src/main/resources/End-to-end Test/output.csv";`
+`16 private static final String outputFilePath = "src/main/resources/End-to-end Test/output.csv";`
 
 the correct output for this Test should be this:
 
@@ -63,6 +63,6 @@ the correct output for this Test should be this:
 
 After you've tested the code you can go back to the original sample-data testing by undoing the changes.
 
-`19 private static final String inputFilePath = "src/main/resources/SampleData/sample-data.csv";`
+`15 private static final String inputFilePath = "src/main/resources/SampleData/sample-data.csv";`
 
-`20 private static final String outputFilePath = "src/main/resources/SampleData/output.csv";`
+`16 private static final String outputFilePath = "src/main/resources/SampleData/output.csv";`
