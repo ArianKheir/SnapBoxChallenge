@@ -13,6 +13,16 @@ public class Courier {
         this.lng = lng;
         this.timestamp = timestamp;
     }
+    public static double dist(double lat1, double lng1, double lat2, double lng2) {
+        double R = 6371;
+        double radLat = Math.toRadians(lat2 - lat1);
+        double radLng = Math.toRadians(lng2 - lng1);
+        double a = Math.sin(radLat / 2) * Math.sin(radLat / 2) +
+                Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2)) *
+                        Math.sin(radLng / 2) * Math.sin(radLng / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        return R * c;
+    }
     public String getId() {
         return id;
     }
