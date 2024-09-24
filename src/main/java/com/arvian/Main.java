@@ -40,7 +40,7 @@ public class Main {
 
                     CompletableFuture<String[]> future = CompletableFuture.supplyAsync(() -> {
                         double fare = Courier.calcFare(arrCopy);
-                        return new String[]{idCopy, String.format("%.16f", fare)};
+                        return new String[]{idCopy, String.format("%.9f", fare)};
                     }, executorService);
 
                     futures.add(future);
@@ -66,7 +66,7 @@ public class Main {
 
             CompletableFuture<String[]> future = CompletableFuture.supplyAsync(() -> {
                 double fare = Courier.calcFare(arrCopy);
-                return new String[]{idCopy, String.format("%.16f", fare)};
+                return new String[]{idCopy, String.format("%.9f", fare)};
             }, executorService);
 
             futures.add(future);
@@ -96,7 +96,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             csvManager();
-            System.out.println("succesfully Done!");
+            System.out.println("successfully Done!");
         } catch (IOException e) {
             e.printStackTrace();
         }
